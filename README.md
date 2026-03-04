@@ -34,4 +34,4 @@ This project aims to provide a simple yet powerful tool for personal financial a
 
 ---
 
-This project is licenced under the [Apache License, Version 2.0](https://opensource.org/license/apache-2-0/).
+This project is licenced under the [MIT License](https://opensource.org/license/mit).
