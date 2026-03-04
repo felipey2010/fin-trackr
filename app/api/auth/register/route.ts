@@ -25,7 +25,15 @@ export async function POST(req: Request) {
       )
     }
 
-    const hashedPassword = await hash(password, 12)
+    const salt = process.env.JWT_SALT
+    if (!salt) {
+      return NextResponse.json(
+        { error: "An internal error occured" },
+        { status: 409 }
+      )
+    }
+
+    const hashedPassword = await hash(password, salt)
 
     const user = await prisma.user.create({
       data: {
